@@ -8,7 +8,15 @@ $(document).ready(function () {
      */
 
     // Punto di partenza
-    var baseMonth = moment('2018-01-01').add(-3, 'month'); 
+    var baseMonth = moment('2018-01-01');
+
+    var monthList = $('.month-list');
+
+    // click left
+    var clickLeft = $('.left')
+
+    // click right
+    var clickRight = $('.right')
 
     // Init Hndlenars
     var source = $('#day-template').html();
@@ -19,6 +27,29 @@ $(document).ready(function () {
 
     // ottieni festività mese corrente
     printHoliday(baseMonth);
+
+
+    clickLeft.click(function(){
+        if (baseMonth.month() > 0) {
+            baseMonth = baseMonth.add(-1,'month');
+			monthList.children().remove();
+			printMonth(template, baseMonth);
+			printHoliday(baseMonth);
+		} else {
+            alert('non puoi andare oltre')
+        }
+    });
+
+    clickRight.click(function(){
+        if (baseMonth.month() < 11){
+			baseMonth = baseMonth.add(1,'month');
+			monthList.children().remove();
+			printMonth(template, baseMonth);
+			printHoliday(baseMonth);
+		} else {
+            alert('non puoi andare oltre')
+        }
+    }); 
 
 }); // <-- End doc ready
 

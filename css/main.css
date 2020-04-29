@@ -16,3 +16,9 @@ body {
 li.holiday {
     color: red;
 }
+
+.left,
+.right {
+    font-size: 20px;
+    cursor: pointer;
+}
