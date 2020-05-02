@@ -36,7 +36,7 @@ $(document).ready(function () {
 			printMonth(template, baseMonth);
 			printHoliday(baseMonth);
 		} else {
-            alert('non puoi andare oltre')
+            alert('Non puoi andare oltre')
         }
     });
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
 			printMonth(template, baseMonth);
 			printHoliday(baseMonth);
 		} else {
-            alert('non puoi andare oltre')
+            alert('Non puoi andare oltre')
         }
     }); 
 
@@ -81,7 +81,8 @@ function printMonth(template, date) {
         // imposta dati template
         var context = {
             class: 'day',
-            day: thisDate.format('DD MMMM'),
+            day: thisDate.format('DD'),
+            dayWord: thisDate.format('dddd'),
             completeDate: thisDate.format('YYYY-MM-DD')
         };
 
@@ -107,11 +108,11 @@ function printHoliday(date) {
             for (var i = 0; i < holidays.length; i++) {
                 var thisHoliday = holidays[i];
 
-                var listItem = $('li[data-complete-date="' + thisHoliday.date + '"]');
+                var listItem = $('h4[data-complete-date="' + thisHoliday.date + '"]');
 
                 if(listItem) {
                     listItem.addClass('holiday');
-                    listItem.text( listItem.text() + ' - ' + thisHoliday.name );
+                    listItem.text( listItem.text() + thisHoliday.name );
                 }
             }
         },

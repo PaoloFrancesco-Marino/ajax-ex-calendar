@@ -17,6 +17,7 @@
     <div class="container">
         <div class="wrapper">
             <div class="app">
+                <!-- nav bar -->
                 <div class="nav-bar">
                     <div class="sx">
                         <div class="box-icon">
@@ -48,17 +49,27 @@
                             <i class="fas fa-bars"></i>
                         </div>
                     </div>
-                </div>
-                <ul class="month-list"></ul>
-            </div>
-        </div>
-    </div>
+                </div><!-- ./Nav-Bar -->
+
+                <!-- calendar -->
+                <div class="calendar">
+                    <ul class="month-list"></ul>
+                </div><!-- ./App -->
+        
+            </div><!-- ./App -->
+        </div><!-- ./Wrapper -->
+    </div><!-- ./Container -->
+
 
 
     <!-- TEMPLATES HANDLEBARS -->
     <script id="day-template" type="text/x-handlebars-template">
-        <li class="{{ class }}" data-complete-date="{{ completeDate }}">
-            {{ day }}
+        <li>
+            <div class="text">
+                <!-- <h4>{{ dayWord}}</h4> -->
+                <h4>{{ day }}</h4>  
+            </div>
+            <h4 class="{{ class }}" data-complete-date="{{ completeDate }}"></h4>
         </li>
     </script>
 
