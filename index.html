@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
+    <!-- Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.css'/>
     <!-- Min CSS -->
@@ -13,10 +15,43 @@
 <body>
     
     <div class="container">
-        <i class="left fas fa-angle-left"></i>
-        <h1 class="month"></h1>
-        <i class="right fas fa-angle-right"></i>
-        <ul class="month-list"></ul>
+        <div class="wrapper">
+            <div class="app">
+                <div class="nav-bar">
+                    <div class="sx">
+                        <div class="box-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="box-icon">
+                            <h4>Oggi</h4>
+                        </div>
+                        <div class="box-icon left">
+                            <i class="fas fa-angle-left"></i>
+                        </div>
+                        <div class="box-icon right">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                    </div>
+                    <div class="cn">
+                        <div class="box-icon">
+                            <h4 class="month"></h4>
+                        </div>
+                    </div>
+                    <div class="dx">
+                        <div class="box-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="box-icon">
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <div class="box-icon">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                    </div>
+                </div>
+                <ul class="month-list"></ul>
+            </div>
+        </div>
     </div>
 
 

@@ -13,10 +13,10 @@ $(document).ready(function () {
     var monthList = $('.month-list');
 
     // click left
-    var clickLeft = $('.left')
+    var clickLeft = $('.box-icon.left')
 
     // click right
-    var clickRight = $('.right')
+    var clickRight = $('.box-icon.right')
 
     // Init Hndlenars
     var source = $('#day-template').html();
@@ -64,7 +64,7 @@ function printMonth(template, date) {
     var daysInMonth = date.daysInMonth();
 
     //  setta header
-    $('h1').html( date.format('MMMM YYYY') );
+    $('.cn .box-icon .month').html( date.format('MMMM YYYY') );
 
     // Imposta data attribute data visualizzata
     $('.month').attr('data-this-date',  date.format('YYYY-MM-DD'));
